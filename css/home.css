@@ -1,0 +1,649 @@
+/* Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background-color: #d32f2f;
+    color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.Logo img {
+    height: 50px;
+    width: auto;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-list a:hover {
+    color: #ffcdd2;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-icons a {
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* Home Page */
+.home-area {
+    display: flex;
+    min-height: calc(100vh - 120px);
+    padding: 2rem;
+}
+
+.left-home, .right-home {
+    flex: 1;
+}
+
+.left-text1 {
+    color: #d32f2f;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.left-text2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+.left-text3 {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.left-text3 h1 {
+    color: #d32f2f;
+    margin-bottom: 1rem;
+}
+
+.left-text3 p {
+    margin-bottom: 1rem;
+}
+
+.right-image img {
+    max-width: 100%;
+    height: auto;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Botões */
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #d32f2f;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    border: none;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #b71c1c;
+    transform: scale(1.05);
+}
+
+/* Páginas comuns */
+main {
+    padding: 2rem;
+    min-height: calc(100vh - 120px);
+}
+
+h2 {
+    color: #d32f2f;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Login e Cadastro */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #b71c1c;
+}
+
+/* Cardápio */
+/* Cardápio */
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.pizza {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Garante que todos os cards tenham a mesma altura */
+}
+
+.pizza:hover {
+    transform: translateY(-5px);
+}
+
+.pizza-image-container {
+    width: 100%;
+    height: 180px; /* Altura fixa para o container da imagem */
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pizza-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra todo o espaço mantendo proporções */
+}
+
+.pizza h3 {
+    margin: 0.5rem 0;
+    color: #d32f2f;
+    font-size: 1.1rem;
+    min-height: 2.5rem; /* Altura mínima para o título */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pizza p {
+    margin-bottom: 1rem;
+    font-weight: bold;
+    flex-grow: 1; /* Faz o preço ficar alinhado na base */
+}
+
+.add-to-cart {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 0.7rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.add-to-cart:hover {
+    background-color: #b71c1c;
+}
+
+/* Carrinho */
+.carrinho {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #f5f5f5;
+    font-weight: 500;
+}
+
+.total {
+    text-align: right;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.btn-success {
+    background-color: #388e3c;
+}
+
+.btn-success:hover {
+    background-color: #2e7d32;
+}
+
+#mensagem-agradecimento {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: #e8f5e9;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .home-area {
+        flex-direction: column;
+    }
+    
+    .nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .menu {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+/* Formulário de cadastro */
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+legend {
+    padding: 0 0.5rem;
+    font-weight: 500;
+    color: #d32f2f;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 1rem;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #b71c1c;
+}
+/* Estilos específicos para a página Sobre */
+.sobre {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.sobre h2 {
+    color: #d32f2f;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.sobre h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: #d32f2f;
+    margin: 0.5rem auto 0;
+}
+
+.sobre h3 {
+    color: #d32f2f;
+    margin: 1.5rem 0 1rem;
+    font-size: 1.4rem;
+}
+
+.sobre p {
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #555;
+    text-align: justify;
+}
+
+.sobre ul {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+}
+
+.sobre li {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+    position: relative;
+    list-style-type: none;
+}
+
+.sobre li::before {
+    content: '🍕';
+    position: absolute;
+    left: -2rem;
+}
+
+/* Layout da página sobre */
+.sobre-container {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.sobre-content {
+    flex: 1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sobre-container {
+        flex-direction: column;
+    }
+    
+    .sobre {
+        padding: 1.5rem;
+    }
+    
+    .sobre h2 {
+        font-size: 1.6rem;
+    }
+    
+    .sobre h3 {
+        font-size: 1.2rem;
+    }
+}/* Estilos para a página de Contato */
+.contato {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.contato h2 {
+    color: #d32f2f;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.contato-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.contato-info div {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.contato-info div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contato-info h3 {
+    color: #d32f2f;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.contato-info p {
+    margin-bottom: 0.5rem;
+}
+
+.contato-info a {
+    color: #d32f2f;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 0.5rem;
+    transition: color 0.3s;
+}
+
+.contato-info a:hover {
+    color: #b71c1c;
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.social-icons a {
+    color: white;
+    background: #d32f2f;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+}
+
+.social-icons a:hover {
+    background: #b71c1c;
+    transform: scale(1.1);
+}
+
+.pedido-form {
+    margin-top: 2rem;
+}
+
+.pedido-form h3 {
+    color: #d32f2f;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.pedido-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.pedido-form input,
+.pedido-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.pedido-form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.pedido-form button {
+    width: 100%;
+    padding: 1rem;
+    background: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.pedido-form button:hover {
+    background: #b71c1c;
+}
+
+/* Layout da página contato */
+.contato-container {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.contato-content {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .contato-container {
+        flex-direction: column;
+    }
+    
+    .contato {
+        padding: 1.5rem;
+    }
+    
+    .contato h2 {
+        font-size: 1.6rem;
+    }
+}/* Estilo para o link da logo */
+.Logo a {
+    transition: transform 0.3s ease;
+}
+
+.Logo a:hover {
+    transform: scale(1.05);
+}
+
+.Logo a:active {
+    transform: scale(0.98);
+}
