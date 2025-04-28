@@ -168,4 +168,60 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+});// Menu toggle
+document.getElementById('menuToggle').addEventListener('click', function() {
+    document.getElementById('navMenu').classList.toggle('active');
+    document.querySelector('main').classList.toggle('menu-active');
+    this.querySelector('i').classList.toggle('fa-bars');
+    this.querySelector('i').classList.toggle('fa-times');
+});// Menu toggle para mobile
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.createElement('button');
+    menuToggle.className = 'menu-toggle';
+    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+    document.body.appendChild(menuToggle);
+    
+    const navMenu = document.getElementById('navMenu');
+    
+    menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+    });
+    
+    // Esconder toggle em telas maiores
+    function handleResize() {
+        if (window.innerWidth > 768) {
+            navMenu.classList.remove('active');
+            menuToggle.style.display = 'none';
+        } else {
+            menuToggle.style.display = 'flex';
+        }
+    }
+    
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Chamar inicialmente
+});// Menu toggle para mobile
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.createElement('button');
+    menuToggle.className = 'menu-toggle';
+    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+    document.body.appendChild(menuToggle);
+    
+    const navMenu = document.querySelector('.nav');
+    
+    menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+    });
+    
+    // Esconder toggle em telas maiores
+    function handleResize() {
+        if (window.innerWidth > 768) {
+            navMenu.classList.remove('active');
+            menuToggle.style.display = 'none';
+        } else {
+            menuToggle.style.display = 'flex';
+        }
+    }
+    
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Chamar inicialmente
 });
